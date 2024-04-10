@@ -72,6 +72,10 @@ public:
   void SetUniformVariablei(const char * name, int value);
   // Set the uniform variable of type "float". 
   void SetUniformVariablef(const char * name, float value);
+  // Set the uniform variable of type "float[3]". 
+  void SetUniformVariable3fv(const char * name, float * value);
+  // Set the uniform variable of type "float[4]". 
+  void SetUniformVariable4fv(const char * name, float * value);
   // Set the uniform variable of type "4x4 matrix of floats" (column-major).
   void SetUniformVariableMatrix4fv(const char * name, GLboolean transpose, float value[16]);
 

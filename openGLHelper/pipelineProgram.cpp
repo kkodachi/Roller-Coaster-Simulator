@@ -221,6 +221,18 @@ void PipelineProgram::SetUniformVariablef(const char * name, float value)
   glUniform1f(GetUniformVariableHandle(name), value);
 }
 
+// Set the uniform variable of type "float[3]". 
+void PipelineProgram::SetUniformVariable3fv(const char * name, float * value)
+{ 
+  glUniform3fv(GetUniformVariableHandle(name), 1, value); 
+}
+
+// Set the uniform variable of type "float[4]". 
+void PipelineProgram::SetUniformVariable4fv(const char * name, float * value)
+{ 
+  glUniform4fv(GetUniformVariableHandle(name), 1, value); 
+}
+
 // Set the uniform variable of type "4x4 matrix of floats" (column-major).
 void PipelineProgram::SetUniformVariableMatrix4fv(const char * name, GLboolean transpose, float value[16])
 {
